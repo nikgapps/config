@@ -5,8 +5,8 @@ Repository to upload config file for NikGapps build to create a custom package
 - Fork [this repository](https://github.com/nikgapps/config)
 - Configure your [nikgapps.config](https://sourceforge.net/projects/nikgapps/files/Releases/Config/nikgapps-config/) (download the latest version always)
 - Set the AppSet=1 or >>Package=1 which you want to keep in your package. For e.g. YouTube=1, PixelLauncher=1, >>PixelTips=1 (any other values will be ignored)
-- Name the config file the name you want to give your custom NikGapps build to. For e.g. xyz.config will create NikGapps-xyz-arm64-<android>-<date>-signed.zip 
-- Upload the config file to your forked repository (make sure the name is unique, it can be anything with extention config)
+- Rename the config file and set the name you want to give your custom NikGapps build to. For e.g. xyz.config will create NikGapps-xyz-arm64-androidversion-date-signed.zip 
+- Commit the config file to your forked repository (make sure the name is unique, it can be anything with extention config)
 - Send a pull request to merge your config file in this repository
 - Wait for the NikGapps nightly cycle to build your desired gapps
 
