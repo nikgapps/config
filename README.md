@@ -2,7 +2,8 @@
 Repository to upload config file for NikGapps Nightly Cycle to create a custom build for you
 
 ## Prerequisite
-- NikGapps configuration file
+- Working knowledge of NikGapps configuration file
+- That's it. No server, No core Gapps knowledge, No other cost!
 
 ## How it'll work?
 - Fork [this repository](https://github.com/nikgapps/config) (Find the fork icon on top right corner of this page)
