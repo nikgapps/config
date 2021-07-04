@@ -1,4 +1,4 @@
-# Create your own NikGapps build [BETA]
+# Create your own NikGapps build
 Repository to upload config file for NikGapps Nightly Cycle to create a custom build for you
 
 ## Prerequisite
