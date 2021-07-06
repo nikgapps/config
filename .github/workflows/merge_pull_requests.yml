@@ -15,6 +15,7 @@ env:
   auth: ${{ secrets.auth }}
   USER_NAME: ${{ secrets.USER_NAME }}
   EMAIL: ${{ secrets.EMAIL }}
+  DISPLAY_RESPONSE: ${{ secrets.DISPLAY_RESPONSE }}
   
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
