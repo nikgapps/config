@@ -18,11 +18,12 @@ env:
   DISPLAY_RESPONSE: ${{ secrets.DISPLAY_RESPONSE }}
   REPO: ${{ github.event.repository.name }}
   OWNER: ${{ github.event.repository.owner.login }}
-  
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   build:
+    if: github.event.repository.owner.login == 'nikgapps'
     # The type of runner that the job will run on
     runs-on: macos-latest
 
