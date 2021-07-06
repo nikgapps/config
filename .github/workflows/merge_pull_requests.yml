@@ -25,7 +25,7 @@ env:
 jobs:
   # This workflow contains a single job called "build"
   build:
-    if: $OWNER == "nikgapps"
+    if: env.OWNER == "nikgapps"
     # The type of runner that the job will run on
     runs-on: macos-latest
 
