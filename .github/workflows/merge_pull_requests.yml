@@ -16,6 +16,8 @@ env:
   USER_NAME: ${{ secrets.USER_NAME }}
   EMAIL: ${{ secrets.EMAIL }}
   DISPLAY_RESPONSE: ${{ secrets.DISPLAY_RESPONSE }}
+  REPO: ${{ github.event.repository.name }}
+  OWNER: ${{ github.event.repository.owner.login }}
   
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -40,6 +42,8 @@ jobs:
           
       - name: Initialization and Fetching the Source Code
         run: |
+           echo "repo: $REPO"
+           echo "repo owner: $OWNER"
            git config --global user.name "$USER_NAME"
            git config --global user.email "$EMAIL"
            git clone git@github.com:nikhilmenghani/build.git
