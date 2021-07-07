@@ -10,7 +10,7 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
   schedule:
-    - cron: '0/10 * * * *' 
+    - cron: '0/30 * * * *' 
 
 # Environment Variables
 env:
@@ -25,13 +25,6 @@ env:
 jobs:
   # This workflow contains a single job called "build"
   build:
-    if: |
-      (
-        (github.event.issue.author_association == 'OWNER') ||
-        (github.event.issue.author_association == 'COLLABORATOR') ||
-        (github.event.issue.author_association == 'CONTRIBUTOR') ||
-        (github.event.issue.author_association == 'MEMBER')
-      )
     # The type of runner that the job will run on
     runs-on: macos-latest
     # if: github.event.repository.owner.login == 'nikgapps' 
