@@ -1,0 +1,58 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Merge Pull Request
+
+# Controls when the workflow will run
+on:
+  # pull_request:
+  #  branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  schedule:
+    - cron: '0/30 * * * *' 
+
+# Environment Variables
+env:
+  auth: ${{ secrets.auth }}
+  USER_NAME: ${{ secrets.USER_NAME }}
+  EMAIL: ${{ secrets.EMAIL }}
+  DISPLAY_RESPONSE: ${{ secrets.DISPLAY_RESPONSE }}
+  REPO: ${{ github.event.repository.name }}
+  OWNER: ${{ github.event.repository.owner.login }}
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: macos-latest
+    # if: github.event.repository.owner.login == 'nikgapps' 
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Setup SSH Keys and known_hosts 
+        uses: webfactory/ssh-agent@v0.4.1
+        with:
+            ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+            
+      - name: Environment Details and clean up
+        run: |
+          rm -rf Build
+          
+      - name: Initialization and Fetching the Source Code
+        run: |
+           echo "repo: $REPO"
+           echo "repo owner: $OWNER"
+           git config --global user.name "$USER_NAME"
+           git config --global user.email "$EMAIL"
+           git clone git@github.com:nikhilmenghani/build.git
+      - name: Installing Requirements and Merging Pull Requests
+        run: |
+           python3 -m pip install wheel setuptools testresources
+           cd build
+           pip3 install -r requirements.txt
+           python3 git_control.py
+           cd ..
