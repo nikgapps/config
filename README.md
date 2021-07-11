@@ -1,8 +1,8 @@
-# Create your own NikGapps build
-Repository to upload config file for NikGapps Nightly Cycle to create a custom build for you
+# Create your own NikGapps build in less than 30 minutes
+Repository to upload config file for NikGapps ecosystem to create a custom build for you
 
 ## Prerequisite
-- Working knowledge of NikGapps configuration file
+- Working knowledge of [NikGapps configuration file](https://nikgapps.com/misc/2020/11/22/NikGapps-Config.html)
 - That's it. No server, No core Gapps knowledge, No other cost!
 
 ## How it'll work?
@@ -22,8 +22,8 @@ Repository to upload config file for NikGapps Nightly Cycle to create a custom b
 For e.g. `YouTube=1`, `PixelLauncher=1`, `>>PixelTips=1` will keep these packages in your custom gapps build while `Drive=0` will skip the package (Any other values will be ignored)  
 - Commit the config file to your forked repository (make sure the name is unique, it can be anything with extention '.config')
 - Send a pull request to merge your config file in this repository
-- Wait for the pull request to get merged
-- Once the pull request is merged, NikGapps nightly cycle will build your desired gapps
+- Wait for the pull request to get merged (should take less than 30 mins)
+- Once the pull request is merged, NikGapps ecosystem will build your desired gapps
 - Once your custom gapps package is build, the config file will be moved to archive with '_date' appended to it
 - Find the date folder in [Config-Releases](https://sourceforge.net/projects/nikgapps/files/Config-Releases/) where you will find your build created
 
