@@ -5,6 +5,9 @@ Repository to upload config file for NikGapps ecosystem to create a custom build
 - Working knowledge of [NikGapps configuration file](https://nikgapps.com/misc/2020/11/22/NikGapps-Config.html)
 - That's it. No server, No core Gapps knowledge, No other cost!
 
+## Is there a video tutorial to create a custom build?
+- Yes, if you want to skip reading and jump to video tutorial. Here is the [video tutorial](https://youtu.be/jZWR9Wz7hMk) that you should follow to create a custom build.
+
 ## How it'll work?
 - Fork [this repository](https://github.com/nikgapps/config) (Find the fork icon on top right corner of this page)
 
