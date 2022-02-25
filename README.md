@@ -1,9 +1,17 @@
-# Create your own NikGapps build [BETA]
-Repository to upload config file for NikGapps Nightly Cycle to create a custom build for you
+# Create your own NikGapps build in less than 30 minutes
+Repository to upload config file for NikGapps ecosystem to create a custom build for you  
+
+
+[![Downloads](https://img.shields.io/badge/dynamic/json?color=green&label=Android%2012%20Builds%20Created%20So%20Far&query=12&url=https%3A%2F%2Fraw.githubusercontent.com%2Fnikgapps%2Ftracker%2Fmain%2Fcount.json&cacheSeconds=900)](https://raw.githubusercontent.com/nikgapps/tracker/main/count.json)  
+[![Downloads](https://img.shields.io/badge/dynamic/json?color=red&label=Android%2011%20Builds%20Created%20So%20Far&query=11&url=https%3A%2F%2Fraw.githubusercontent.com%2Fnikgapps%2Ftracker%2Fmain%2Fcount.json&cacheSeconds=900)](https://raw.githubusercontent.com/nikgapps/tracker/main/count.json)  
+[![Downloads](https://img.shields.io/badge/dynamic/json?color=blue&label=Android%2010%20Builds%20Created%20So%20Far&query=10&url=https%3A%2F%2Fraw.githubusercontent.com%2Fnikgapps%2Ftracker%2Fmain%2Fcount.json&cacheSeconds=900)](https://raw.githubusercontent.com/nikgapps/tracker/main/count.json)
 
 ## Prerequisite
-- Working knowledge of NikGapps configuration file
+- Working knowledge of [NikGapps configuration file](https://nikgapps.com/misc/2020/11/22/NikGapps-Config.html)
 - That's it. No server, No core Gapps knowledge, No other cost!
+
+## Is there a video tutorial to create a custom build?
+- Yes, if you want to skip reading and jump to video tutorial. Here is the [video tutorial](https://youtu.be/jZWR9Wz7hMk) that you should follow to create a custom build.
 
 ## How it'll work?
 - Fork [this repository](https://github.com/nikgapps/config) (Find the fork icon on top right corner of this page)
@@ -22,8 +30,8 @@ Repository to upload config file for NikGapps Nightly Cycle to create a custom b
 For e.g. `YouTube=1`, `PixelLauncher=1`, `>>PixelTips=1` will keep these packages in your custom gapps build while `Drive=0` will skip the package (Any other values will be ignored)  
 - Commit the config file to your forked repository (make sure the name is unique, it can be anything with extention '.config')
 - Send a pull request to merge your config file in this repository
-- Wait for the pull request to get merged
-- Once the pull request is merged, NikGapps nightly cycle will build your desired gapps
+- Wait for the pull request to get merged (should take less than 30 mins)
+- Once the pull request is merged, NikGapps ecosystem will build your desired gapps
 - Once your custom gapps package is build, the config file will be moved to archive with '_date' appended to it
 - Find the date folder in [Config-Releases](https://sourceforge.net/projects/nikgapps/files/Config-Releases/) where you will find your build created
 
