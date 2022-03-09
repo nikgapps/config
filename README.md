@@ -38,6 +38,42 @@ For e.g. `YouTube=1`, `PixelLauncher=1`, `>>PixelTips=1` will keep these package
 ## How to request for a custom build again
 - Follow above steps again as once the custom build is created, config file will be moved to archive
 
+## Self make your custom build 
+### Prerequisites
+Make sure you have [python3](https://www.python.org/), [git](https://git-scm.com/), [aapt](https://packages.debian.org/buster/aapt) installed.
+```
+python3 -m pip install wheel setuptools testresources
+```
+### Building
+- Git clone [the build scripts](https://github.com/nikgapps/build) Into a directory:
+```
+git clone https://github.com/nikgapps/build.git --depth=1
+```
+- Install needed dependencies for building:
+```
+cd build
+pip3 install -r requirements.txt
+cd ..
+```
+- Set GIT_CHECK and BUILD_CONFIG to False in Config.py inside build scripts directory using your Editor
+  - (Optional) Set SIGN_ZIP to False to disable signing
+```
+<EDITOR> build/Config.py
+```
+- Git clone [this repository](https://github.com/nikgapps/config) Into a directory:
+  - NOTE: this must be placed in the same root directory as the build scripts.
+```
+git clone https://github.com/nikgapps/config.git --depth=1
+```
+- Download the latest version of [nikgapps.config](https://sourceforge.net/projects/nikgapps/files/Releases/Config/nikgapps-config/) and place it inside your desired android version you will be building e.g. `<config dir>/<android ver>/nikgapps.config` and edit it to your liking.
+- Rename the config file you downloaded and set the name you want to give your custom NikGapps build to. e.g. `xyz.config` will create `NikGapps-xyz-arm64-androidversion-date-signed.zip` 
+- Finally, Build.
+```
+cd build
+python3 config_control.py <android ver>
+```
+You should now have a custom NikGapps with your own Configuration.
+
 ## Blog
 
 For More information on [this repository](https://github.com/nikgapps/config), refer [nikgapps blog](https://nikgapps.com/misc/2021/04/10/Build-Own-NikGapps-Build.html)
