@@ -1,10 +1,15 @@
 # Create your own NikGapps build in less than 30 minutes
 Repository to upload config file for NikGapps ecosystem to create a custom build for you  
 
-[![Downloads](https://img.shields.io/badge/dynamic/json?color=brown&label=Android%2012.1%20Builds%20Created%20So%20Far%20%20%20-&query=SL&url=https%3A%2F%2Fraw.githubusercontent.com%2Fnikgapps%2Ftracker%2Fmain%2Fcount.json&cacheSeconds=900)](https://raw.githubusercontent.com/nikgapps/tracker/main/count.json)  
-[![Downloads](https://img.shields.io/badge/dynamic/json?color=green&label=Android%2012%20Builds%20Created%20So%20Far%20%20%20%20%20-&query=S&url=https%3A%2F%2Fraw.githubusercontent.com%2Fnikgapps%2Ftracker%2Fmain%2Fcount.json&cacheSeconds=900)](https://raw.githubusercontent.com/nikgapps/tracker/main/count.json)  
-[![Downloads](https://img.shields.io/badge/dynamic/json?color=red&label=Android%2011%20Builds%20Created%20So%20Far%20%20%20%20%20-&query=R&url=https%3A%2F%2Fraw.githubusercontent.com%2Fnikgapps%2Ftracker%2Fmain%2Fcount.json&cacheSeconds=900)](https://raw.githubusercontent.com/nikgapps/tracker/main/count.json)  
-[![Downloads](https://img.shields.io/badge/dynamic/json?color=blue&label=Android%2010%20Builds%20Created%20So%20Far%20%20%20%20%20-&query=10&url=https%3A%2F%2Fraw.githubusercontent.com%2Fnikgapps%2Ftracker%2Fmain%2Fcount.json&cacheSeconds=900)](https://raw.githubusercontent.com/nikgapps/tracker/main/count.json)
+
+## Builds Created So Far
+
+[![Downloads](https://img.shields.io/badge/dynamic/json?color=blueviolet&label=Total%20Created%20&query=total&url=https%3A%2F%2Fraw.githubusercontent.com%2Fnikgapps%2Ftracker%2Fmain%2Fcount.json&cacheSeconds=900)](https://raw.githubusercontent.com/nikgapps/tracker/main/count.json)  
+  
+[![Downloads](https://img.shields.io/badge/dynamic/json?color=brown&label=Android%2012.1%20&query=SL&url=https%3A%2F%2Fraw.githubusercontent.com%2Fnikgapps%2Ftracker%2Fmain%2Fcount.json&cacheSeconds=900)](https://raw.githubusercontent.com/nikgapps/tracker/main/count.json)  
+[![Downloads](https://img.shields.io/badge/dynamic/json?color=yellowgreen&label=Android%2012.0%20&query=S&url=https%3A%2F%2Fraw.githubusercontent.com%2Fnikgapps%2Ftracker%2Fmain%2Fcount.json&cacheSeconds=900)](https://raw.githubusercontent.com/nikgapps/tracker/main/count.json)  
+[![Downloads](https://img.shields.io/badge/dynamic/json?color=red&label=Android%2011.0%20&query=R&url=https%3A%2F%2Fraw.githubusercontent.com%2Fnikgapps%2Ftracker%2Fmain%2Fcount.json&cacheSeconds=900)](https://raw.githubusercontent.com/nikgapps/tracker/main/count.json)  
+[![Downloads](https://img.shields.io/badge/dynamic/json?color=blue&label=Android%2010.0%20&query=Q&url=https%3A%2F%2Fraw.githubusercontent.com%2Fnikgapps%2Ftracker%2Fmain%2Fcount.json&cacheSeconds=900)](https://raw.githubusercontent.com/nikgapps/tracker/main/count.json)
 
 ## Prerequisite
 - Working knowledge of [NikGapps configuration file](https://nikgapps.com/misc/2022/02/22/NikGapps-Config.html)
