@@ -6,6 +6,8 @@ Repository to upload config file for NikGapps ecosystem to create a custom build
 
 [![Downloads](https://img.shields.io/badge/dynamic/json?color=blueviolet&label=Total%20Created%20&query=total&url=https%3A%2F%2Fraw.githubusercontent.com%2Fnikgapps%2Ftracker%2Fmain%2Fcount.json&cacheSeconds=900)](https://raw.githubusercontent.com/nikgapps/tracker/main/count.json)  
   
+
+[![Downloads](https://img.shields.io/badge/dynamic/json?color=blue&label=Android%2013.0%20&query=T&url=https%3A%2F%2Fraw.githubusercontent.com%2Fnikgapps%2Ftracker%2Fmain%2Fcount.json&cacheSeconds=900)](https://raw.githubusercontent.com/nikgapps/tracker/main/count.json)  
 [![Downloads](https://img.shields.io/badge/dynamic/json?color=brown&label=Android%2012.1%20&query=SL&url=https%3A%2F%2Fraw.githubusercontent.com%2Fnikgapps%2Ftracker%2Fmain%2Fcount.json&cacheSeconds=900)](https://raw.githubusercontent.com/nikgapps/tracker/main/count.json)  
 [![Downloads](https://img.shields.io/badge/dynamic/json?color=yellowgreen&label=Android%2012.0%20&query=S&url=https%3A%2F%2Fraw.githubusercontent.com%2Fnikgapps%2Ftracker%2Fmain%2Fcount.json&cacheSeconds=900)](https://raw.githubusercontent.com/nikgapps/tracker/main/count.json)  
 [![Downloads](https://img.shields.io/badge/dynamic/json?color=red&label=Android%2011.0%20&query=R&url=https%3A%2F%2Fraw.githubusercontent.com%2Fnikgapps%2Ftracker%2Fmain%2Fcount.json&cacheSeconds=900)](https://raw.githubusercontent.com/nikgapps/tracker/main/count.json)  
