@@ -41,6 +41,7 @@ For e.g. `YouTube=1`, `PixelLauncher=1`, `>>PixelTips=1` will keep these package
 - Once the pull request is merged, NikGapps ecosystem will build your desired gapps
 - Once your custom gapps package is build, the config file will be moved to archive with '_date' appended to it
 - Find the date folder in [Config-Releases](https://sourceforge.net/projects/nikgapps/files/Config-Releases/) where you will find your build created
+- Since July 28, 2023, Sourceforge server is running into issues while connecting, thus until the issue is resolved, we've mirrorred the builds and you can find your build [here](https://t.me/NikGappsGroup/185401).
 
 ## How to request for a custom build again
 - Follow above steps again as once the custom build is created, config file will be moved to archive
