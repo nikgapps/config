@@ -6,12 +6,12 @@ Repository to upload config file for NikGapps ecosystem to create a custom build
 
 [![Downloads](https://img.shields.io/badge/dynamic/json?color=blueviolet&label=Total%20Created%20&query=total&url=https%3A%2F%2Fraw.githubusercontent.com%2Fnikgapps%2Ftracker%2Fmain%2Fcount.json&cacheSeconds=900)](https://raw.githubusercontent.com/nikgapps/tracker/main/count.json)  
   
-
+[![Downloads](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=Android%2014.0%20&query=U&url=https%3A%2F%2Fraw.githubusercontent.com%2Fnikgapps%2Ftracker%2Fmain%2Fcount.json&cacheSeconds=900)](https://raw.githubusercontent.com/nikgapps/tracker/main/count.json)  
 [![Downloads](https://img.shields.io/badge/dynamic/json?color=blue&label=Android%2013.0%20&query=T&url=https%3A%2F%2Fraw.githubusercontent.com%2Fnikgapps%2Ftracker%2Fmain%2Fcount.json&cacheSeconds=900)](https://raw.githubusercontent.com/nikgapps/tracker/main/count.json)  
 [![Downloads](https://img.shields.io/badge/dynamic/json?color=brown&label=Android%2012.1%20&query=SL&url=https%3A%2F%2Fraw.githubusercontent.com%2Fnikgapps%2Ftracker%2Fmain%2Fcount.json&cacheSeconds=900)](https://raw.githubusercontent.com/nikgapps/tracker/main/count.json)  
 [![Downloads](https://img.shields.io/badge/dynamic/json?color=yellowgreen&label=Android%2012.0%20&query=S&url=https%3A%2F%2Fraw.githubusercontent.com%2Fnikgapps%2Ftracker%2Fmain%2Fcount.json&cacheSeconds=900)](https://raw.githubusercontent.com/nikgapps/tracker/main/count.json)  
 [![Downloads](https://img.shields.io/badge/dynamic/json?color=red&label=Android%2011.0%20&query=R&url=https%3A%2F%2Fraw.githubusercontent.com%2Fnikgapps%2Ftracker%2Fmain%2Fcount.json&cacheSeconds=900)](https://raw.githubusercontent.com/nikgapps/tracker/main/count.json)  
-[![Downloads](https://img.shields.io/badge/dynamic/json?color=blue&label=Android%2010.0%20&query=Q&url=https%3A%2F%2Fraw.githubusercontent.com%2Fnikgapps%2Ftracker%2Fmain%2Fcount.json&cacheSeconds=900)](https://raw.githubusercontent.com/nikgapps/tracker/main/count.json)
+[![Downloads](https://img.shields.io/badge/dynamic/json?color=green&label=Android%2010.0%20&query=Q&url=https%3A%2F%2Fraw.githubusercontent.com%2Fnikgapps%2Ftracker%2Fmain%2Fcount.json&cacheSeconds=900)](https://raw.githubusercontent.com/nikgapps/tracker/main/count.json)
 
 ## Prerequisite
 - Working knowledge of [NikGapps configuration file](https://nikgapps.com/misc/2022/02/22/NikGapps-Config.html)
@@ -41,6 +41,7 @@ For e.g. `YouTube=1`, `PixelLauncher=1`, `>>PixelTips=1` will keep these package
 - Once the pull request is merged, NikGapps ecosystem will build your desired gapps
 - Once your custom gapps package is build, the config file will be moved to archive with '_date' appended to it
 - Find the date folder in [Config-Releases](https://sourceforge.net/projects/nikgapps/files/Config-Releases/) where you will find your build created
+- Since July 28, 2023, Sourceforge server is running into issues while connecting, thus until the issue is resolved, we've mirrorred the builds and you can find your build [here](https://t.me/NikGappsGroup/185401).
 
 ## How to request for a custom build again
 - Follow above steps again as once the custom build is created, config file will be moved to archive
