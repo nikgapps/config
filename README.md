@@ -2,7 +2,7 @@
 1. Reboot to recovery.
 2. Flash[^flash] **exactly the same version** or **newer** ROM.
 3. **[For A/B devices only:** Reboot to recovery.**]**
-4. Flash[^flash] the updated NikGapps found in this release.
+4. Flash[^flash] the updated NikGapps found [here](https://github.com/pdsakurai/nikgapps-config/releases).
 5. Reboot to system
 
 ## Exception
