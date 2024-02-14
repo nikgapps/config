@@ -7,11 +7,12 @@
 
 ## Exception
 The following packages won't be updated:
-1. Velvet (Google app)
-2. Android Auto
-3. Google Clock
-4. Google Play Services
-5. Google Sounds
+1. Android Auto
+1. Google App
+1. Google Assistant
+1. Google Clock
+1. Google Play Services
+1. Google Sounds
 
 # Footnote
 [^flash]: The word flash is interchangable with ADB-sideload.
