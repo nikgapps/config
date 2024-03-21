@@ -33,8 +33,9 @@ Repository to upload config file for NikGapps ecosystem to create a custom build
 - Copy the downloaded file to specific target android version folder (for e.g, config must be part of '10' folder if you wish to create a build targeting android 10, similarly for android 11 and above)  
 **<ins>NOTE:</ins>** Do not reuse/modify or delete any existing '.config' files from any of the folders to avoid problems during building and troubleshooting 
 - Rename the config file you downloaded and set the name you want to give your custom NikGapps build to. For e.g. `xyz.config` will create `NikGapps-xyz-arm64-androidversion-date-signed.zip` 
-- Configure your config file, set `AppSet=1` or `>>Package=1` if you want to keep it in your package, else set it to `0`  
-For e.g. `YouTube=1`, `PixelLauncher=1`, `>>PixelTips=1` will keep these packages in your custom gapps build while `Drive=0` will skip the package (Any other values will be ignored)  
+- Configure your config file, set `AppSet=1` or `>>Package=1` if you want to include it in your package, else set it to `0`
+  - You may also set packages to `2` to include it in your package and prevent the AOSP package from being removed when your package is installed
+  - For e.g. `YouTube=1`, `PixelLauncher=1`, `>>PixelTips=1` will keep these packages in your custom gapps build while `Drive=0` will skip the package (Any other values will be ignored)  
 - Commit the config file to your forked repository (make sure the name is unique, it can be anything with extention '.config')
 - Send a pull request to merge your config file in this repository
 - Wait for the pull request to get merged (should take less than 30 mins)
