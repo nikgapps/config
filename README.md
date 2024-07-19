@@ -43,7 +43,7 @@ Repository to upload config file for NikGapps ecosystem to create a custom build
 9. **Wait for the pull request to be merged**: This should take less than 30 minutes.
 10. **Once merged**, the NikGapps ecosystem will build your custom Gapps.
 11. **After the build**, your config file will be moved to the archive with '_date' appended to it.
-12. **Find your build**: Look for the date folder in [Config-Releases](https://sourceforge.net/projects/nikgapps/files/Config-Releases/), where you will find your build.
+12. **Find your build**: Look for the date folder in [Config-Releases](https://sourceforge.net/projects/nikgapps/files/NikGappsConfigs/), where you will find your build.
 
 ## How to request for a custom build again
 - Follow above steps again as once the custom build is created, config file will be moved to archive
