@@ -1,5 +1,3 @@
-PR_NUMBER=11274
-PR_NAME=chengnan049
 # Create your own NikGapps build in less than 30 minutes
 Repository to upload config file for NikGapps ecosystem to create a custom build for you  
 
