@@ -30,7 +30,7 @@ Repository to upload config file for NikGapps ecosystem to create a custom build
 
    ![](https://raw.githubusercontent.com/nikgapps/nikgapps.github.io/master/images/ForkingRepo.png)
 
-3. **Download the latest version of the [nikgapps.config](https://sourceforge.net/projects/nikgapps/files/Releases/Config/)**.
+3. **Download the latest version of the [nikgapps.config](https://sourceforge.net/projects/nikgapps/files/NikGappsConfigs/)**.
 4. **Copy the downloaded file** to the specific target Android version folder (e.g., place the config file in the '10' folder if you want to create a build targeting Android 10).
 
    **Note:** Do not reuse, modify, or delete any existing '.config' files from any of the folders to avoid issues during building and troubleshooting.
