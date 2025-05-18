@@ -1,0 +1,58 @@
+name: NikGApps Custom Build
+
+on:
+  workflow_dispatch:
+
+env:
+  USER_NAME: your-github-username
+  EMAIL: your-email@example.com
+  REPO: ${{ github.event.repository.name }}
+  OWNER: ${{ github.event.repository.owner.login }}
+  RELEASE_TYPE: 'custom'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Dùng Ubuntu để dễ cài dependencies
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show environment info
+        run: |
+          echo "Repo: $REPO"
+          echo "Owner: $OWNER"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install build requirements
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install wheel setuptools testresources
+
+      - name: Clone NikGApps OnDemand
+        run: |
+          git config --global user.name "$USER_NAME"
+          git config --global user.email "$EMAIL"
+          git clone --depth=1 https://github.com/nikgapps/ondemand.git
+
+      - name: Install Python requirements
+        run: |
+          cd ondemand
+          pip install -r requirements.txt
+          cd ..
+
+      - name: Build NikGApps (Android 13 - Basic variant)
+        run: |
+          cd ondemand
+          python3 main.py -A 13 -V basic -U -c
+          cd ..
+
+      - name: Archive built packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: nikgapps-output
+          path: ondemand/Output/*
