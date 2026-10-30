@@ -1,0 +1,89 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Elite Builds
+
+# Controls when the workflow will run
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+  workflow_dispatch:
+  
+# Environment Variables
+env:
+  auth: ${{ secrets.AUTH }}
+  deploy_auth: ${{ secrets.DEPLOY_AUTH }}
+  USER_NAME: ${{ secrets.USER_NAME }}
+  EMAIL: ${{ secrets.EMAIL }}
+  REPO: ${{ github.event.repository.name }}
+  OWNER: ${{ github.event.repository.owner.login }}
+  SF_PWD: ${{ secrets.SF_PWD }}
+  RELEASE_TYPE: 'stable'
+  ENVIRONMENT_TYPE: ${{ secrets.ENVIRONMENT_TYPE }}
+  TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+  TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+  MESSAGE_THREAD_ID: ${{ secrets.MESSAGE_THREAD_ID }}
+  ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: macos-latest    
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      - name: Setup SSH Keys and known_hosts 
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+            ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      
+      - name: Add multiple hosts to known_hosts
+        run: |
+          ssh-keyscan frs.sourceforge.net >> ~/.ssh/known_hosts
+          ssh-keyscan gitlab.com >> ~/.ssh/known_hosts 
+           
+      - name: Environment Details and clean up
+        run: |
+          rm -rf Build 10 11 12 Releases canary-release release nikgapps.github.io TempPackages
+          echo "repo: $REPO"
+          echo "repo owner: $OWNER"
+      
+      - name: Checking Java Version
+        run: |
+          java -version
+      
+      - name: Initialization and Fetching the Source Code
+        run: |
+          git config --global user.name "$USER_NAME"
+          git config --global user.email "$EMAIL"
+          git config --global http.postBuffer 1048576000
+          git clone --depth=1 git@github.com:nikgapps/ondemand.git
+           
+      - name: Installing Requirements
+        run: |
+          python3 -m pip install wheel setuptools testresources
+          cd ondemand
+          pip3 install -r requirements.txt
+          cd ..
+
+      - name: Building Android 13 Elite Builds
+        run: |
+          cd ondemand
+          python3 main.py -A 13 -U -e 1 -c
+          cd ..
+
+      - name: Building Android 14 Elite Builds
+        run: |
+          cd ondemand
+          python3 main.py -A 14 -U -e 1 -c
+          cd ..
+        
+      - name: Updating download count
+        run: |
+          cd ondemand
+          python3 analytics_control.py
+          cd ..
